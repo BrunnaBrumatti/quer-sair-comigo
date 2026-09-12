@@ -1,0 +1,375 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background:
+        radial-gradient(circle at 20% 20%, #ffffff 0%, transparent 25%),
+        radial-gradient(circle at 80% 80%, #ffd0e3 0%, transparent 30%),
+        linear-gradient(135deg, #ffe6f0, #ffd1e2);
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    overflow: hidden;
+
+    position: relative;
+}
+
+
+/* ========================= */
+/* CORAÇÕES FLUTUANDO */
+/* ========================= */
+
+.coracoes {
+    position: fixed;
+
+    inset: 0;
+
+    pointer-events: none;
+
+    overflow: hidden;
+}
+
+.coracoes span {
+    position: absolute;
+
+    bottom: -50px;
+
+    color: #ff1493;
+
+    font-size: 25px;
+
+    opacity: 0.5;
+
+    animation: subir 8s linear infinite;
+}
+
+
+/* Posições dos corações */
+
+.coracoes span:nth-child(1) {
+    left: 5%;
+    animation-delay: 0s;
+    font-size: 20px;
+}
+
+.coracoes span:nth-child(2) {
+    left: 15%;
+    animation-delay: 2s;
+    font-size: 35px;
+}
+
+.coracoes span:nth-child(3) {
+    left: 25%;
+    animation-delay: 4s;
+    font-size: 18px;
+}
+
+.coracoes span:nth-child(4) {
+    left: 35%;
+    animation-delay: 1s;
+    font-size: 30px;
+}
+
+.coracoes span:nth-child(5) {
+    left: 45%;
+    animation-delay: 5s;
+    font-size: 22px;
+}
+
+.coracoes span:nth-child(6) {
+    left: 55%;
+    animation-delay: 3s;
+    font-size: 32px;
+}
+
+.coracoes span:nth-child(7) {
+    left: 65%;
+    animation-delay: 6s;
+    font-size: 20px;
+}
+
+.coracoes span:nth-child(8) {
+    left: 75%;
+    animation-delay: 2.5s;
+    font-size: 38px;
+}
+
+.coracoes span:nth-child(9) {
+    left: 82%;
+    animation-delay: 4.5s;
+    font-size: 24px;
+}
+
+.coracoes span:nth-child(10) {
+    left: 90%;
+    animation-delay: 1.5s;
+    font-size: 30px;
+}
+
+.coracoes span:nth-child(11) {
+    left: 95%;
+    animation-delay: 5.5s;
+    font-size: 18px;
+}
+
+.coracoes span:nth-child(12) {
+    left: 50%;
+    animation-delay: 7s;
+    font-size: 26px;
+}
+
+
+@keyframes subir {
+
+    0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 0;
+    }
+
+    15% {
+        opacity: 0.6;
+    }
+
+    50% {
+        transform: translateY(-50vh) rotate(20deg);
+    }
+
+    100% {
+        transform: translateY(-110vh) rotate(-20deg);
+        opacity: 0;
+    }
+}
+
+
+/* ========================= */
+/* CAIXINHA */
+/* ========================= */
+
+.caixa {
+    width: 500px;
+
+    min-height: 600px;
+
+    background: rgba(255, 255, 255, 0.96);
+
+    border-radius: 30px;
+
+    padding: 35px 30px;
+
+    text-align: center;
+
+    position: relative;
+
+    z-index: 10;
+
+    box-shadow:
+        0 20px 50px rgba(255, 20, 147, 0.18),
+        0 0 0 4px rgba(255, 20, 147, 0.08);
+
+    animation: aparecer 0.8s ease;
+}
+
+
+@keyframes aparecer {
+
+    from {
+        opacity: 0;
+        transform: scale(0.85);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+
+/* ========================= */
+/* MINI CORAÇÕES */
+/* ========================= */
+
+.mini-coracoes {
+    color: #ff1493;
+
+    font-size: 22px;
+
+    letter-spacing: 8px;
+
+    margin-bottom: 18px;
+
+    animation: pulsar 1.8s infinite;
+}
+
+
+@keyframes pulsar {
+
+    0%, 100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.12);
+    }
+}
+
+
+/* ========================= */
+/* FOTO */
+/* ========================= */
+
+.foto-casal {
+    width: 280px;
+    height: 280px;
+
+    object-fit: cover;
+
+    border-radius: 25px;
+
+    border: 6px solid #ff1493;
+
+    padding: 4px;
+
+    background: white;
+
+    margin-bottom: 22px;
+
+    box-shadow:
+        0 8px 25px rgba(255, 20, 147, 0.25);
+
+    transition: transform 0.3s ease;
+}
+
+
+.foto-casal:hover {
+    transform: scale(1.03) rotate(-1deg);
+}
+
+
+/* ========================= */
+/* TÍTULO */
+/* ========================= */
+
+h1 {
+    color: #ff1493;
+
+    font-size: 34px;
+
+    margin-bottom: 10px;
+
+    font-weight: 800;
+}
+
+
+/* ========================= */
+/* SUBTÍTULO */
+/* ========================= */
+
+.subtitulo {
+    color: #999;
+
+    font-size: 15px;
+
+    margin-bottom: 28px;
+}
+
+
+/* ========================= */
+/* BOTÕES */
+/* ========================= */
+
+.botoes {
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 20px;
+}
+
+
+button {
+    border: none;
+
+    padding: 13px 30px;
+
+    border-radius: 12px;
+
+    font-size: 17px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+
+/* BOTÃO SIM */
+
+#sim {
+    background: #ff1493;
+
+    color: white;
+
+    box-shadow: 0 5px 15px rgba(255, 20, 147, 0.3);
+}
+
+
+#sim:hover {
+    background: #e6007e;
+
+    transform: scale(1.08);
+}
+
+
+/* BOTÃO NÃO */
+
+#nao {
+    background: #bdbdbd;
+
+    color: white;
+
+    position: relative;
+}
+
+
+/* ========================= */
+/* MENSAGEM FINAL */
+/* ========================= */
+
+#mensagem {
+    color: #ff1493;
+
+    font-size: 25px;
+
+    font-weight: bold;
+
+    margin-top: 30px;
+
+    animation: aparecerMensagem 0.5s ease;
+}
+
+
+@keyframes aparecerMensagem {
+
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}   
